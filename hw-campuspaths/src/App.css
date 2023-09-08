@@ -1,0 +1,55 @@
+/*
+ * Copyright (C) 2023 Soham Pardeshi.  All rights reserved.  Permission is
+ * hereby granted to students registered for University of Washington
+ * CSE 331 for use solely during Spring Quarter 2021 for purposes of
+ * the course.  No other use, copying, distribution, or modification
+ * is permitted without prior written consent. Copyrights for
+ * third-party components of this work must be honored.  Instructors
+ * interested in reusing these course materials should contact the
+ * author.
+ */
+
+/*
+CSS file used by the Application
+
+It provides placement and style information for the components in the app
+and only exists for aesthetic purposes. The app would work just fine if this
+file was empty.
+*/
+
+/* Centers component with ID "map-wrapper" and sets width and bottom spacing */
+#map {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 800px;
+}
+
+/* Sets size of map, which has class name "leaflet-container" */
+.leaflet-container {
+    width: 800px;
+    height: 600px;
+}
+
+/* Add animation to the lines drawn on the map */
+.map-line {
+    animation: drawLine 2s ease-in-out forwards; /* Change animation duration and timing function as needed */
+    opacity: 0; /* Start with opacity 0 to hide the line initially */
+    stroke-dasharray: 1000; /* Set the initial dash array value */
+    stroke-dashoffset: 1000; /* Set the initial dash offset value */
+}
+
+/* Keyframes for the animation */
+@keyframes drawLine {
+    0% {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        opacity: 0;
+    }
+    100% {
+        stroke-dasharray: 0;
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+}

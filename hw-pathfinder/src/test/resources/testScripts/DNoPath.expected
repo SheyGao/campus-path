@@ -1,0 +1,13 @@
+# Find a path with Dijkstra's algorithm when the path not found.
+
+created graph simpleGraph
+
+added node A to simpleGraph
+added node B to simpleGraph
+added node C to simpleGraph
+added node D to simpleGraph
+
+added edge 1.000 from A to C in simpleGraph
+
+path from A to B:
+no path found

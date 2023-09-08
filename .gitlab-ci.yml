@@ -1,0 +1,96 @@
+stages:
+  - build
+  - validation
+
+variables:
+  RUNNER_SCRIPT: /cse/courses/cse331/23su/public/gitlab-ci/scripts/Runner.py
+
+demo-build:
+  stage: build
+  script: python3 -c 'print("\n\n\u001b[35mCongrats, you have pushed the section-demo tag!\u001b[39m\n\n")'
+  only: ["section-demo"]
+  except: ["branches"]
+
+setup-build:
+  stage: build
+  script: $RUNNER_SCRIPT hw-setup build
+  only: ["hw2-final"]
+  except: ["branches"]
+
+setup-validation:
+  stage: validation
+  script: $RUNNER_SCRIPT hw-setup validation
+  only: ["hw2-final"]
+  except: ["branches"]
+
+base-build:
+  stage: build
+  script: $RUNNER_SCRIPT hw-base build
+  only: ["hw3-final"]
+  except: ["branches"]
+
+base-validation:
+  stage: validation
+  script: $RUNNER_SCRIPT hw-base validation
+  only: ["hw3-final"]
+  except: ["branches"]
+
+sets-build:
+  stage: build
+  script: $RUNNER_SCRIPT hw-sets build
+  only: ["hw4-final"]
+  except: ["branches"]
+
+sets-validation:
+  stage: validation
+  script: $RUNNER_SCRIPT hw-sets validation
+  only: ["hw4-final"]
+  except: ["branches"]
+
+graph-design-build:
+  stage: build
+  script: $RUNNER_SCRIPT hw-graph-design build
+  only: ["hw5-final"]
+  except: ["branches"]
+
+graph-design-validation:
+  stage: validation
+  script: $RUNNER_SCRIPT hw-graph-design validation
+  only: ["hw5-final"]
+  except: ["branches"]
+
+graph-build:
+  stage: build
+  script: $RUNNER_SCRIPT hw-graph build
+  only: ["hw6-final"]
+  except: ["branches"]
+
+graph-validation:
+  stage: validation
+  script: $RUNNER_SCRIPT hw-graph validation
+  only: ["hw6-final"]
+  except: ["branches"]
+
+pathfinder-build:
+  stage: build
+  script: $RUNNER_SCRIPT hw-pathfinder build
+  only: ["hw7-final"]
+  except: ["branches"]
+
+pathfinder-validation:
+  stage: validation
+  script: $RUNNER_SCRIPT hw-pathfinder validation
+  only: ["hw7-final"]
+  except: ["branches"]
+
+tasks-build:
+  stage: build
+  script: $RUNNER_SCRIPT hw-tasks build
+  only: ["hw7-final"]
+  except: ["branches"]
+
+tasks-validation:
+  stage: validation
+  script: $RUNNER_SCRIPT hw-tasks validation
+  only: ["hw7-final"]
+  except: ["branches"]

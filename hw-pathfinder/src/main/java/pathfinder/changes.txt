@@ -1,0 +1,12 @@
+Briefly list any changes you made to your graph class during hw-pathfinder, and why you made those changes.
+
+Besides making the existing implementation generic, I also changes the parameter of the Edges object,
+Originally, I had parent, child, label for making up an edge, and now I'm having only child and label for making up
+an edge. By using only the child node and label in the edge, we can rely on the existing graph structure
+to manage the relationship between parent and child nodes. Additionally, I added hashCode() method and equals() method
+to Node and Edges classes. As the default equals() is for objects, but we have to override the method to
+accommodate the generics type. In my test driver code, I also changed the data type of my test nodes from String to
+Nodes<String>. Also, I declared the graph to be HashMap<String, LabeledGraph<String, String>> graphs =
+new HashMap<String, LabeledGraph<String, String>>() in the test code. By doing these in my test files,
+it manages to accommodate the generics and makes the test cases work.
+

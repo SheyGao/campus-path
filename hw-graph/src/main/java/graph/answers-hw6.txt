@@ -1,0 +1,63 @@
+## CSE 331 HW6 Questions
+
+NOTE: This file is used as part of HW6, and is not due as part of the HW5
+submission. You may leave it blank for HW5.
+
+## Part 1
+###########################################################################
+
+A few examples of possible Graph representations:
+
+    A: A collection of nodes and a collection of edges.
+    B: An adjacency list, in which each node is associated with a list of its outgoing edges.
+    C: An adjacency matrix, which explicitly represents, for every pair ⟨A,B⟩ of nodes, whether there 
+       is a link from A to B, and how many.
+
+1. In two or three sentences, explain an advantage and a disadvantage of each of the
+representations listed above (for example, in terms of runtime complexity, space
+complexity, or ease of implementation).
+
+A_advantage：This is a simple structure and easy to implement. The graph structure is easy to understand,
+and it can be useful for quick prototyping.
+A_disadvantage：This has high runtime complexity. For example, when we want to figure out if there's an edge between two nodes,
+we need to iterate through all the nodes.
+
+B_advantage：For sparse graphs, it will be memory-efficient. It only stores the existing outgoing edges,
+instead of saving space for all the possible edges for every pair ⟨A,B⟩ of nodes as in C.
+B_disadvantage：For dense graphs, it can be time-consuming to traverse through all the elements in the list
+to check if there's an edge between the two nodes.
+
+C_advantage: It's efficient for edge existence checks, as it's a constant-time access.
+This lookup operation takes constant time, O(1), regardless of the size of the graph.
+C_disadvantage: Adding or removing nodes or edges can be computationally expensive for dense and large graph,
+as it may require resizing the matrix and updating all entries.
+
+2. In two to three sentences, describe the representation you chose and explain why you
+chose it. If you chose to use a different representation than one of the three we described
+above, be sure to list its advantages and disadvantages, too.
+
+I choose representation B. The reason is that it is easy to understand and have a clear data structure to me
+for each node (parent) in the graph to be associated with a list of its outgoing edges.
+The outgoing edges are represented as a Map<String, Set<String>>,
+where the keys are the child nodes, and the values are sets of labels.
+
+## Part 4
+###########################################################################
+
+    (Please keep your answers brief and to-the-point.)
+
+1. Describe any new tests you added and why you added them, or why you feel that your original
+tests alone are sufficient.
+
+1) I added a hasEdge test since I added this method in LabeledGraph.java.
+2) I added one additional test for both testAddNode and testAddEdge, verifying that the existing node or edge
+should not be added again.
+3) I added one additional test for testRemoveNode, verifying that once a node is removed, it should also be removed
+as a child node of the other nodes.
+
+2. Did you make any changes to your specifications as you were implementing your Graph? (yes/no)
+If yes, describe your changes and why you made them.
+No.
+
+
+

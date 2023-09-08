@@ -1,0 +1,17 @@
+# Test if two nodes, two edge can be added to the graph (two edges: point to each other)
+
+# Create a Graph
+created graph graph2
+
+# Add a node to the graph
+added node a to graph2
+added node b to graph2
+
+# Add a edge to the graph
+added edge e2 from a to b in graph2
+added edge e3 from b to a in graph2
+
+# Print the nodes in the graph and the outgoing edges from a, the outgoing edges from b
+graph2 contains: a b
+the children of a in graph2 are: b(e2)
+the children of b in graph2 are: a(e3)

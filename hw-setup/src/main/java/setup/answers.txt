@@ -1,0 +1,50 @@
+## CSE 331 hw-setup Questions
+## Part 7: Answering Questions About the Code
+
+1. Why did Fibonacci fail the testThrowsIllegalArgumentException< test? What (if anything) did
+you have to do to fix it? If you did not have to change anything to fix this issue, explain why.
+
+Fibonacci failed the testThrowsIllegalArgumentException< test because n=0 is included in the if statement,
+and it returns 0 is negative when n=0 whereas 0 is non-negative. I excluded n=0 in the if statement and changed
+n<=0 to n<0.
+
+2. Why did Fibonacci fail the testBaseCase test? What (if anything) did you have to do to fix
+it? If you did not have to change anything to fix this issue, explain why.
+
+Fibonacci failed the testBaseCase test because when n=0 it should return 1, however, the original code
+threw exception. To fix this, make n=0 go into the else if statement so that it returned 1.
+
+3.Why did Fibonacci fail the testInductiveCase test? What (if anything) did you have to do to
+fix it? If you did not have to change anything to fix this issue, explain why.
+
+Fibonacci failed the testInductiveCase test because the test expected getFibTerm(2) to be <2> but it returned <1>.
+n=2 is included in the else if statement, where when n=2 it automatically returns 1. To fix this, I excluded
+n=2 in the else if statement so n=2 goes to the else statement, and it returns the sum of first element and second
+element in the series. In this case, it returns the correct result <2>.
+
+## Part 8: Debugger Tutorial
+
+1. What are the values of "x", "y", and "sum" printed by your statement? Why was x not equal 
+to the first integer entered here, and how could we fix this?
+
+The value of x is 4, value of y is 4, and value of sum is 0. x is not equal to the first integer
+because x is not set to be equal to the exact inputted value in the main method.
+Originally, when the inputted value is 5, it processes as int x = 2 * 2 = 4.
+So we changed int x = 2 * (console.nextInt() / 2) to int x = console.nextInt() to make sure
+that x is the exact first value we inputted.
+
+2. What are all the names and values listed in the “Variables” panel? What does the “frames” 
+tab list as the current method and line number? (Write down the text that was highlighted when 
+the Debug perspective first opened.)
+
+In the "Variables" panel, x=3, y=4. The current method and line number is computeSum:45, Adder (setup).
+return x - y; is also highlighted in Adder.java.
+
+3. What are all the names and values listed in the “Variables” panel after each of the two step overs?
+
+After the first step over, there's x=3, y=4, args = {String[0]@765}[], console = {Scanner@766}
+After the second step over, there is a new variable and its value: sum = -1.
+
+
+
+

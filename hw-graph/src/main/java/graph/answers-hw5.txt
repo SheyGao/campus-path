@@ -1,0 +1,37 @@
+## CSE 331 hw-graph Coding Questions
+
+## Part 2
+###########################################################################
+
+Briefly explain why you included the operations you did and why you feel they are a sufficient
+interface to a graph. If your design includes multiple classes or interfaces, explain why you
+included each one; if not, explain whether you considered additional classes and why you decided
+not to include them.
+
+Inside LabeledGraph, I created Nodes class and Edges class because the basic elements of graph are built in this way.
+Also, I provided methods so that they make up the basic functions of a directed labeled graph. I feel these are sufficient
+to a graph because the methods provided allow us to build, access, and modify the elements of a map.
+These are the basic methods that make the operation work. I created Nodes class and Edges class because the LabeledGraph
+class itself becomes cleaner and simpler. It can focus on managing the overall structure of the graph,
+connecting nodes through edges, and performing graph-related operations.
+
+## Part 3
+###########################################################################
+
+What was your testing strategy for this assignment? How do your script tests and JUnit tests
+differ from each other (if they do), and why?
+
+The testing strategy is to test every behavior that script test didn't test for in JUnit test, so that
+combing these two test it should cover most cases. They are different in usage, as we use JUnit tests
+for ensuring the correctness of individual code units, and use script tests for validating the system as a whole.
+The combination of unit tests and script tests contributes to a more robust application. They differ
+because of their focus and purpose of testing.
+
+
+
+
+
+
+
+
+TODO: Your answer here!

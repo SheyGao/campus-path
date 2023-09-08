@@ -1,0 +1,17 @@
+# Test if two nodes, two edge can be added to the graph (two edges: point to each other)
+
+# Create a Graph
+CreateGraph graph2
+
+# Add a node to the graph
+AddNode graph2 a
+AddNode graph2 b
+
+# Add a edge to the graph
+AddEdge graph2 a b e2
+AddEdge graph2 b a e3
+
+# Print the nodes in the graph and the outgoing edges from a, the outgoing edges from b
+ListNodes graph2
+ListChildren graph2 a
+ListChildren graph2 b

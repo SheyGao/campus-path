@@ -1,0 +1,8 @@
+# Find a path with Dijkstra's algorithm when the node is unknown.
+
+CreateGraph simpleGraph
+
+AddNode simpleGraph A
+AddNode simpleGraph B
+
+FindPath simpleGraph E F

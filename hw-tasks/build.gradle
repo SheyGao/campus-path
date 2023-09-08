@@ -1,0 +1,10 @@
+task runTaskSorterMain(type: JavaExec) {
+   group "homework"
+   mainClass = "tasks/TaskSorterMain"
+   standardInput = System.in
+   classpath = sourceSets.main.runtimeClasspath
+}
+
+dependencies {
+   implementation project(':hw-graph')
+}

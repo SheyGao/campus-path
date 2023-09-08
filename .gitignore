@@ -1,0 +1,18 @@
+# Gradle Files
+build/
+.gradle/
+
+# IntelliJ Files
+*.iml
+.idea/
+out/
+
+# Mac
+.DS_Store
+
+# npm dependencies
+node-modules/
+node_modules/
+
+# dump files
+*.hprof

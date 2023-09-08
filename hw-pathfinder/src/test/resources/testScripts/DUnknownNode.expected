@@ -1,0 +1,10 @@
+# Find a path with Dijkstra's algorithm when the node is unknown.
+
+created graph simpleGraph
+
+added node A to simpleGraph
+added node B to simpleGraph
+
+path from E to F:
+unknown: E
+unknown: F

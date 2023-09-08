@@ -1,0 +1,8 @@
+# Test that a graph can be created.
+
+# Create a Graph
+CreateGraph emptyGraph
+
+# Print the nodes in the graph
+ListNodes emptyGraph
+

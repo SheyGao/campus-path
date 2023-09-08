@@ -1,0 +1,13 @@
+# Test if two nodes can be added
+
+# Create a Graph
+created graph graph2
+
+# Add a node to the graph
+added node a to graph2
+added node b to graph2
+
+# Print the nodes in the graph, the outgoing edges from a, the outgoing edges from b
+graph2 contains: a b
+the children of a in graph2 are:
+the children of b in graph2 are:

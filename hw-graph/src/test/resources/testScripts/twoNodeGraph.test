@@ -1,0 +1,13 @@
+# Test if two nodes can be added
+
+# Create a Graph
+CreateGraph graph2
+
+# Add a node to the graph
+AddNode graph2 a
+AddNode graph2 b
+
+# Print the nodes in the graph, the outgoing edges from a, the outgoing edges from b
+ListNodes graph2
+ListChildren graph2 a
+ListChildren graph2 b
